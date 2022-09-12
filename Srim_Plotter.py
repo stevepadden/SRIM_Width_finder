@@ -53,48 +53,7 @@ print(transmitted)
 
 opt_data = transmitted
 range_data = depth
-# print(transmitted)
-# h1 = transmitted.hist(column="Energy",bins=50)#
-# h1 = h1[0]
-# h1[0].set_xlabel("Energy(eV)")
-# h1[0].set_ylabel("Counts")
-# plt.show()
 
-#Two D Histograms
-# fig,ax = plt.subplots()
-# cmap = "viridis"
-# heatmap,xedges,yedges = np.histogram2d(transmitted["Lateral_Y"],transmitted["Lateral_Z"],bins=50)
-# rmsx = np.sqrt(np.sum(np.power(transmitted["Lateral_Y"],2) )/len(transmitted["Lateral_Y"]) )
-# rmsy = np.sqrt(np.sum(np.power(transmitted["Lateral_Z"],2) )/len(transmitted["Lateral_Z"]) )
-# ax.set_xlabel("x ($\AA$)")
-# ax.set_ylabel("y ($\AA$)")
-# extent = [xedges[0], xedges[-1], yedges[0], yedges[-1]]
-# minx, maxx, miny, maxy, endlim = findmax(transmitted["Lateral_Y"], transmitted["Lateral_Z"])
-# ax.set_xlim((-endlim, endlim))
-# ax.set_ylim((-endlim, endlim))
-# tt = ax.imshow(heatmap.T, extent=extent, origin='lower', cmap=cmap, aspect="auto")
-# #tt = ax.imshow(heatmap.T, extent=extent, origin='lower', cmap=cmap, aspect="equal")
-# ax.set_facecolor('#440154')
-# str = "$\sigma_{RMSX} =$ %.2f ($\AA$) \n$\sigma_{RMSY} =$ %.2f ($\AA$)" % (rmsx, rmsy)
-# ax.plot([], [], ' ', label=str)
-# ax.legend(frameon=False, facecolor='#440154', labelcolor="w")
-# cbar = plt.colorbar(tt, ax=ax)
-# ax.set_title("Spatial heatmap of protons leaving SRIM simulated foil \n of %s $\AA$ thickness"% (Foil_Width))
-# fig.set_tight_layout(tight=True)
-# fig.show()
-
-#Max Depth Plotting
-# h2,bins = np.histogram(depth["Depth_X"],bins=50)
-# h2 = h2[0]
-# print(bins)
-# print(h2)
-#
-# print(len(bins))
-# print(len(h2[0]))
-# fig,ax = plt.subplots()
-# #ax.bar(bins[:-1],h2[0])
-# ax.scatter(bins,h2[0])
-# fig.show()
 
 fig,ax = plt.subplots()
 #transed= depth["Depth_X"][depth["Depth_X"]>PRAL_thickness].count()
